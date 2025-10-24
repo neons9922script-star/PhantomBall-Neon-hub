@@ -926,7 +926,3 @@ print("   - 90m: Bola sai -> +20 distância no Auto Parry")
 print("   - 70m: Bola entra (após 90m) -> Manual Spam ATIVADO")
 print("   - 90m: Bola sai novamente -> Manual Spam DESATIVADO")
 print("🌌 Black Hole Auto Parry carregado completamente!")
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/neons9922script-star/Ball-painel/refs/heads/main/Script"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/neons9922script-star/Anti-lag-painel-Phantom-ball/refs/heads/main/Script"))()
