@@ -9,7 +9,7 @@ local LocalPlayer = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
 
 -- Variáveis principais
-local detectionDistance = 25
+local detectionDistance = 22
 local distanceIncrement = 1.5
 local incrementBonus = 0
 local isDetecting = false
