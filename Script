@@ -926,3 +926,5 @@ print("   - 90m: Bola sai -> +20 distância no Auto Parry")
 print("   - 70m: Bola entra (após 90m) -> Manual Spam ATIVADO")
 print("   - 90m: Bola sai novamente -> Manual Spam DESATIVADO")
 print("🌌 Black Hole Auto Parry carregado completamente!")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Elison999/Anti-ball-glitch/refs/heads/main/Anti%20ball%20glitch"))()
