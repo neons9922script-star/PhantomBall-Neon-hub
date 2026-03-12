@@ -9,8 +9,8 @@ local LocalPlayer = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
 
 -- Variáveis principais
-local detectionDistance = 15
-local distanceIncrement = 1.5
+local detectionDistance = 10
+local distanceIncrement = 1
 local incrementBonus = 0
 local isDetecting = false
 local isSpamming = false
@@ -537,7 +537,7 @@ local function setupDeathDetection()
             local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
             if humanoid then
                 humanoid.Died:Connect(function()
-                    detectionDistance = 30
+                    detectionDistance = 10
                     incrementBonus = 0
                 end)
             end
@@ -546,7 +546,7 @@ local function setupDeathDetection()
         player.CharacterAdded:Connect(function(character)
             local humanoid = character:WaitForChild("Humanoid")
             humanoid.Died:Connect(function()
-                detectionDistance = 30
+                detectionDistance = 10
                 incrementBonus = 0
             end)
         end)
@@ -669,7 +669,7 @@ end)
 local hasExecutedThisDetection = false
 local lastBallColor = nil
 local lastProximityBoost = 0
-local proximityBoostCooldown = 0.3
+local proximityBoostCooldown = 0.1
 
 RunService.RenderStepped:Connect(function()
     if not GetToggle1State() then 
@@ -723,9 +723,9 @@ RunService.RenderStepped:Connect(function()
                 
                 fireServerCode()
                 
-                if detectionDistance < 100 then
+                if detectionDistance < 300 then
                     detectionDistance = math.min(detectionDistance + (distanceIncrement + incrementBonus), 100)
-                    incrementBonus = incrementBonus + 0.7
+                    incrementBonus = incrementBonus + 0.55
                 end
             end
         else
